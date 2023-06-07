@@ -1,0 +1,45 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.register-form {
+  border: 1px solid black;
+  border-radius: 7px;
+  width: 300px;
+  padding: 20px;
+  text-align: center;
+}
+
+.register-group {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  margin-bottom: 15px;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button.register-submit {
+  margin-top: 15px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  background-image: linear-gradient(to right, #FF00CC, #3366FF);
+  border: none;
+  cursor: pointer;
+  color: white;
+}
+
+p.error {
+  font-size: 14px;
+  color: red;
+  margin-top: 5px;
+}

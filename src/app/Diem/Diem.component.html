@@ -1,0 +1,80 @@
+<h2>Thông tin điểm</h2>
+
+<form (ngSubmit)="submitScoreForm()">
+  <div>
+    <label for="maSV">Mã SV:</label>
+    <input type="text" id="maSV" [(ngModel)]="maSV" name="maSV" required>
+  </div>
+
+  <div>
+    <label for="maMonDiem">Mã môn:</label>
+    <input type="text" id="maMonDiem" [(ngModel)]="maMon" name="maMonDiem" required>
+  </div>
+
+  <div>
+    <label for="diemThi">Điểm thi:</label>
+    <input type="number" id="diemThi" [(ngModel)]="diemThi" name="diemThi" required>
+  </div>
+
+  <div>
+    <label for="diemGK">Điểm giữa kỳ:</label>
+    <input type="number" id="diemGK" [(ngModel)]="diemGK" name="diemGK" required>
+  </div>
+
+  <div>
+    <label for="diemCC">Điểm chuyên cần:</label>
+    <input type="number" id="diemCC" [(ngModel)]="diemCC" name="diemCC" required>
+  </div>
+
+  <div>
+    <label for="diemMon">Điểm môn:</label>
+    <input type="number" id="diemMon" [(ngModel)]="diemMon" name="diemMon" required>
+  </div>
+
+  <div>
+    <label for="namHoc">Năm học:</label>
+    <input type="text" id="namHoc" [(ngModel)]="namHoc" name="namHoc" required>
+  </div>
+
+  <div>
+    <label for="hocKy">Học kỳ:</label>
+    <input type="text" id="hocKy" [(ngModel)]="hocKy" name="hocKy" required>
+  </div>
+
+  <div>
+    <button type="submit">Lưu</button>
+  </div>
+</form>
+
+<h2>Danh sách điểm</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Mã SV</th>
+      <th>Mã môn</th>
+      <th>Điểm thi</th>
+      <th>Điểm giữa kỳ</th>
+      <th>Điểm chuyên cần</th>
+      <th>Điểm môn</th>
+      <th>Năm học</th>
+      <th>Học kỳ</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let diem of diemList">
+      <td>{{ diem.maSV }}</td>
+      <td>{{ diem.maMon }}</td>
+      <td>{{ diem.diemThi }}</td>
+      <td>{{ diem.diemGK }}</td>
+      <td>{{ diem.diemCC }}</td>
+      <td>{{ diem.diemMon }}</td>
+      <td>{{ diem.namHoc }}</td>
+      <td>{{ diem.hocKy }}</td>
+      <td>
+        <button (click)="removeScore(diem.maSV)">Xóa</button>
+      </td>
+    </tr>
+  </tbody>
+</table>

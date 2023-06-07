@@ -1,0 +1,47 @@
+{
+  "giaoVienList": [
+    {
+      "maGV": "GV01",
+      "tenGV": "Trần Thị Kim Xuyên",
+      "email": "tranxuyen@gmail.com",
+      "sdt": "05683945674",
+      "maKhoa": "KT"
+    },
+    {
+      "maGV": "GV02",
+      "tenGV": "Nguyễn Hồng Bảo Lâm",
+      "email": "lam@gmail.com",
+      "sdt": "05683945674",
+      "maKhoa": "IT"
+    }
+  ],
+  "sinhVienList": [
+    {
+      "maSV": "01",
+      "tenSV": "Xuyên",
+      "namSinh": "2002",
+      "email": "tranxuyen@gmail.com",
+      "gioTinh": "Nữ",
+      "SDT": "0978658579",
+      "diaChi": "Bình Định",
+      "maLop": "A"
+    }
+  ],
+  "users": [
+    {
+      "username": "Xuyen",
+      "password": "1234",
+      "id": 1
+    },
+    {
+      "username": "KimXuyen",
+      "password": "4567",
+      "id": 2
+    },
+    {
+      "username": "huy",
+      "password": "123",
+      "id": 3
+    }
+  ]
+}

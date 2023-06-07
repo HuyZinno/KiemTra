@@ -1,0 +1,23 @@
+<div class="container">
+  <form class="register-form" [formGroup]="registerForm" (ngSubmit)="handleRegiter(registerForm)">
+    <h2 class="register-title">Đăng ký</h2>
+    <div class="register-group">
+      <input type="text" placeholder="Username" formControlName="username" />
+      <div class="error" *ngIf="registerForm.get('username')?.errors && (registerForm.get('username')?.touched || registerForm.get('username')?.dirty)">
+        <ng-container *ngIf="registerForm.get('username')?.errors?.['required']">
+          Username is required
+        </ng-container>
+      </div>
+    </div>
+    <div class="register-group">
+      <input type="password" placeholder="Password" formControlName="password" />
+      <div class="error" *ngIf="registerForm.get('password')?.errors && (registerForm.get('password')?.touched || registerForm.get('password')?.dirty)">
+        <ng-container *ngIf="registerForm.get('password')?.errors?.['required']">
+          Password is required
+        </ng-container>
+      </div>
+    </div>
+    <button class="register-submit" type="submit">Register</button>
+    <p class="error" *ngIf="message">{{ message }}</p>
+  </form>
+</div>

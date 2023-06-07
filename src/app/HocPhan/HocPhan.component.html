@@ -1,0 +1,52 @@
+<h2>Thông tin học phần</h2>
+
+<form (ngSubmit)="submitForm()">
+  <div>
+    <label for="maMon">Mã môn:</label>
+    <input type="text" id="maMon" [(ngModel)]="maMon" name="maMon" required>
+  </div>
+
+  <div>
+    <label for="tenMon">Tên môn:</label>
+    <input type="text" id="tenMon" [(ngModel)]="tenMon" name="tenMon" required>
+  </div>
+
+  <div>
+    <label for="soTC">Số tín chỉ:</label>
+    <input type="number" id="soTC" [(ngModel)]="soTC" name="soTC" required>
+  </div>
+
+  <div>
+    <label for="maGV">Mã giáo viên:</label>
+    <input type="text" id="maGV" [(ngModel)]="maGV" name="maGV" required>
+  </div>
+
+  <div>
+    <button type="submit">Lưu</button>
+  </div>
+</form>
+
+<h2>Danh sách học phần</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Mã môn</th>
+      <th>Tên môn</th>
+      <th>Số tín chỉ</th>
+      <th>Mã giáo viên</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let hocPhan of hocPhanList">
+      <td>{{ hocPhan.maMon }}</td>
+      <td>{{ hocPhan.tenMon }}</td>
+      <td>{{ hocPhan.soTC }}</td>
+      <td>{{ hocPhan.maGV }}</td>
+      <td>
+        <button (click)="removeHocPhan(hocPhan.maMon)">Xóa</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
